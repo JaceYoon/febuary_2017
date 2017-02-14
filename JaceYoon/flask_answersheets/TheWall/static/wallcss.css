@@ -1,0 +1,133 @@
+#header
+{
+  width:400px;
+  height: 300px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: aqua;
+}
+#header h3
+{
+  color:gold;
+}
+#header button
+{
+  background-color: black;
+  color: white;
+  width: 220px;
+  margin-top: 20px;
+  margin-bottom:20px;
+}
+.top
+{
+  border-bottom: 2px solid black;
+  height: 50px;
+  color:white;
+  background-color: black;
+}
+.top h1
+{
+  margin-top:3px;
+}
+.body
+{
+  margin-top:100px;
+  margin-left:200px;
+}
+.body input
+{
+  width: 500px;
+  height: 100px;
+}
+.top h1,.top p,.top button
+{
+  display: inline-block;
+}
+.top h1
+{
+  margin-left: 10px;
+}
+.top p
+{
+  margin-left: 250px;
+}
+.top button
+{
+  vertical-align: top;
+  margin-left: 90px;
+  margin-top: 10px;
+}
+.body h3
+{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+#msgbox
+{
+  max-width: 330px;
+  margin-left:180px;
+  margin-top:15px;
+  padding-top:15px;
+  margin-bottom:5px;
+  border: 3px solid black;
+}
+#logout
+{
+  max-width: 150px;
+  color: white;
+  background-color: lightgreen;
+  border-radius: 10px;
+}
+#wrap
+{
+  margin-top: 20px;
+  max-width: 800px;
+  margin:0px auto;
+  border: 2px solid grey;
+  height: 800px;
+  overflow-y: scroll;
+  background-color: #305d35;
+  color:white;
+}
+#commentmsg
+{
+  border: 3px solid black;
+  background-color: green;
+  max-width: 250px;
+  margin-left:15px;
+  margin-top:15px;
+  padding-top:15px;
+  margin-bottom:15px;
+  display: inline-block;
+  vertical-align: top;
+}
+.postmsgs
+{
+  max-width: 500px;
+  max-height: 100px;
+  margin-left:20px;
+}
+.postingstyle
+{
+  border: 4px solid #286090;
+}
+.commentstyle
+{
+  border: 2px solid #286090;
+  margin-left: 70px;
+}
+#com
+{
+  height:50px;
+  width:400px;
+  margin-top:15px;
+  margin-right:2px;
+  padding-right:0px;
+  display: inline-block;
+}
+#commentform
+{
+  width:700px;
+  height:85px;
+  margin-left: 75px;
+}

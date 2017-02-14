@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Login and Registration</title>
+    </head>
+    <style media="screen">
+      input{
+        margin-bottom:15px;
+        width: 150px;
+      }
+    </style>
+    <body>
+      <div id = "wrapper">
+        <h1>Regiester Form!</h1>
+        <form action='/regi/form' method='post'>
+            Your First Name: <input type='text' name='fname'>
+            <br>
+            Your Last Name: <input type='text' name='lname'>
+            <br>
+            Email: <input type='text' name='email'>
+            <br>
+            Password : <input type='password' name='pwd'>
+            <br>
+            Password Confirmation: <input type='password' name='confirm'>
+            <br>
+            <button type="submit" name="go">submit!</button>
+        </form>
+      </div>
+      <div id="text">
+        {% with messages = get_flashed_messages( )%}
+          {% if messages %}
+            {% for message in messages%}
+              <p>{{message}}</p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+      </div>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>The Wall</title>
+       <link rel="stylesheet" type='text/css' href="{{ url_for('static', filename='bootstrap.css')}}">
+       <style media="screen">
+         #container
+         {
+           border: 2px solid grey;
+           max-width: 350px;
+           height: 350px;
+           margin:0 auto;
+         }
+         .form-signin
+         {
+           max-width: 330px;
+           padding: 15px 15px 0px 15px;
+           margin:0 auto;
+         }
+         #text
+         {
+           color:red;
+           text-align: center;
+         }
+         input
+         {
+           margin-bottom:5px;
+         }
+       </style>
+    </head>
+    <body>
+      <div id="container">
+        <form class="form-signin" action='/regi/form' method='post'>
+          <h2 class= "form-signin-heading" >Regiester Form!</h2>
+          <input class="form-control" type='text' name='fname' placeholder="First Name">
+          <input class="form-control" type='text' name='lname' placeholder="Last Name">
+          <input class="form-control" type='text' name='email' placeholder="Email">
+          <input class="form-control" type='password' name='password' placeholder="Password">
+          <input class="form-control" type='password' name='confirm' placeholder="Password Confirm">
+          <button class="btn btn-lg btn-primary btn-block" type="submit" name="go">submit!</button>
+        </form>
+      </div>
+      <div id="text">
+        {% with messages = get_flashed_messages( )%}
+          {% if messages %}
+            {% for message in messages%}
+              <p>{{message}}</p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+      </div>
+    </body>
+</html>
