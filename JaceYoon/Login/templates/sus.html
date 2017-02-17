@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>success</title>
+  </head>
+  <body>
+    <h2>
+      {% with messages = get_flashed_messages( )%}
+        {% if messages %}
+          {% for message in messages%}
+            <p>{{message}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      </h2>
+      <form action="/new" method="post">
+        <button type="button" name="home">Go home</button>
+      </form>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" type='text/css' href="{{ url_for('static', filename='bootstrap.css')}}">
+    <style media="screen">
+      #container
+      {
+        border: 2px solid grey;
+        max-width: 350px;
+        margin:0 auto;
+      }
+      input
+      {
+        margin-bottom:5px;
+      }
+      .form-signin
+      {
+        max-width: 330px;
+        padding: 15px 15px 0px 15px;
+        margin:0 auto;
+      }
+      .regi
+      {
+        max-width: 330px;
+        padding: 2px 15px 15px 15px;
+        margin:0 auto;
+      }
+      #wrong
+      {
+        color:red;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <form class="form-signin" action="/wall" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input id="inputEmail" class="form-control" type='text' name='l_email' placeholder="Email address">
+        <input id="inputPassword" class="form-control" type='password' name='l_pwd' placeholder="Password">
+        <button class="btn btn-lg btn-primary btn-block" type="submit" name="login">Sign in</button>
+      </form>
+      <form class="regi" action="/regi" method="post">
+        <button class="btn btn-lg btn-primary btn-block" type="submit" name="signin">Register</button>
+      </form>
+      <div id="wrong">
+        {% with messages = get_flashed_messages( )%}
+        {% if messages %}
+        {% for message in messages%}
+        <p>{{message}}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+      </div>
+    </div>
+  </body>
+</html>

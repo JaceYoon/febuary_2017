@@ -45,7 +45,7 @@ def home():
     query = "SELECT messages.id, messages.message, messages.users_id, messages.created_at, users.first_name, users.last_name from messages join users on users.id = messages.users_id order by messages.created_at DESC"
     msg = mysql.query_db(query)
 
-    query2 = "SELECT comments.id,comments.messages_id, messages.id, comments.comment,comments.users_id, comments.created_at, users.first_name, users.last_name from comments join users on users.id = comments.users_id join messages on messages.id = comments.messages_id;"
+    query2 = "SELECT comments.id,comments.messages_id, messages.id, comments.comment,comments.users_id, comments.created_at, users.first_name, users.last_name from comments join users on users.id = comments.users_id join messages on messages.id = comments.messages_id order by comments.created_at DESC;"
     comment = mysql.query_db(query2)
 
     return render_template('homepage.html', message=msg, comment=comment)

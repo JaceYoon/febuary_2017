@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *
+      {
+        margin:0px auto;
+        padding:0px auto;
+        text-align: center;
+      }
+      .box
+      {
+        max-width: 600px;
+        height: 70px;
+        border: 4px solid black;
+      }
+      .box h2
+      {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="" action="/generate" method="post">
+      {% csrf_token %}
+      <h2>Attempt # {{request.session.num}}</h2>
+      <div class="box">
+        <h2>{{request.session.random}}</h2>
+      </div>
+      <button type="submit" name="submit">Generate</button>
+    </form>
+    <form class="" action="/clear" method="post">
+      {% csrf_token %}
+      <button type="submit" name="submit">clear</button>
+    </form>
+  </body>
+</html>
